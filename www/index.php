@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <?php echo '<p>Xin Chao</p>'; ?>
+    <?php echo '<p>Hello world</p>'; ?>
 </body>
 
 </html>
