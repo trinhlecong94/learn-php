@@ -1,0 +1,40 @@
+<?php require '__header.phtml'; ?>
+<?php require '__menu.phtml'; ?>
+<h1>Login</h1>
+<?php if ($isLoginError): ?>
+<div style="color: red;margin-bottom: 2vh; font-weight: bold;">
+  Wrong nick or password. Please try again.
+</div>
+<?php endif ?>
+<?php if ($isRegistered): ?>
+<div style="color: green;margin-bottom: 2vh; font-weight: bold;">
+  Registration was successful. Now you can login.
+</div>
+<?php endif ?>
+<form action="/login" method="POST">
+  <table>
+    <tr>
+      <td>
+        <label for="nick">Nick</label>
+      </td>
+      <td>
+        <input type="text" name="nick" id="nick" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="password">Password</label>
+      </td>
+      <td>
+        <input type="password" name="password" id="password" />
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+        <button type="submit">Login</button>
+      </td>
+    </tr>
+  </table>
+</form>
+<?php require '__footer.phtml'; ?>

@@ -1,0 +1,13 @@
+<?php require '__header.phtml'; ?>
+<?php require '__menu.phtml'; ?>
+<h1>Homepage</h1>
+<div style="margin-bottom: 2vh; font-weight: bold;">
+  <?php if ($isLoggedIn): ?>
+    <div style="color: green;">
+      Logged in
+    </div>
+  <?php else: ?>
+      Not logged in
+  <?php endif ?>
+</div>
+<?php require '__footer.phtml'; ?>

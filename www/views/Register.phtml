@@ -1,0 +1,35 @@
+<?php require '__header.phtml'; ?>
+<?php require '__menu.phtml'; ?>
+<h1>Register</h1>
+<?php if ($isRegistrationError): ?>
+<div style="color: red;margin-bottom: 2vh; font-weight: bold;">
+  This nick is already taken. Please choose different one.
+</div>
+<?php endif ?>
+<form action="/register" method="POST">
+  <table>
+    <tr>
+      <td>
+        <label for="nick">Nick</label>
+      </td>
+      <td>
+        <input type="text" name="nick" id="nick" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="password">Password</label>
+      </td>
+      <td>
+        <input type="password" name="password" id="password" />
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+        <button type="submit">Register</button>
+      </td>
+    </tr>
+  </table>
+</form>
+<?php require '__footer.phtml'; ?>
