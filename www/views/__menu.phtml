@@ -2,6 +2,8 @@
   | <a href="/">Homepage</a> |
   <?php if ($isLoggedIn): ?>
     <a href="/logout">Logout</a> |
+    <?php echo $_SESSION["nick"]; ?>
+    <a href="/changePass">Change Password</a> |
   <?php else: ?>
     <a href="/login">Login</a> |
     <a href="/register">Register</a> |
