@@ -5,7 +5,7 @@ class LoginController extends BaseController {
   public function render($params) {
     $isLoggedIn = isset($_SESSION["auth"]) && $_SESSION["auth"] == true;
 
-    if($isLoggedIn)
+    if($isLoggedIn) 
       $this->redirect('/');
 
     if(isset($_POST["nick"]) && isset($_POST["password"])) {
@@ -20,6 +20,7 @@ class LoginController extends BaseController {
 
       if ($isCorrect) {
         $_SESSION["auth"] = true;
+        $_SESSION["nick"] = $nick;
         $this->redirect('/');
       } else {
         $this->redirect('/login?error');
